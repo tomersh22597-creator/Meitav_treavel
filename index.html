@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<!-- lang="he" sets language to Hebrew for browsers/SEO; dir="rtl" sets Right-To-Left reading direction -->
+<html lang="he" dir="rtl">
+<head>
+    <!-- Character encoding specification for universal language support -->
+    <meta charset="UTF-8">
+    <!-- Viewport declaration ensures responsive auto-scaling across mobile, tablet, and desktop screens -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Page Title displayed in browser tabs and search engine results -->
+    <title>מיטב - תכנון טיולים אישי</title>
+
+    <!-- Google Fonts: Preconnects and loads Assistant typography stylesheet -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- External Global Stylesheet Link (Relative path pointing to our css folder) -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ==========================================
+         NAVIGATION HEADER
+         ========================================== -->
+    <nav>
+        <div class="nav-container">
+            <!-- Brand Logo Linking to Homepage Top -->
+            <a href="index.html" class="logo">
+                <!-- Inline SVG Vector Icon representing a globe -->
+                <svg class="logo-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <span>מיטב <span class="logo-subtext">תכנון טיולים אישי</span></span>
+            </a>
+            
+            <!-- Navigation Links pointing to internal section IDs -->
+            <ul class="nav-links">
+                <li><a href="#about">קצת עליי</a></li>
+                <li><a href="#services">השירותים שלי</a></li>
+                <li><a href="#destinations">יעדים ומסלולים</a></li>
+            </ul>
+            
+            <!-- Quick WhatsApp CTA Link -->
+            <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" class="nav-btn">בוואטסאפ</a>
+        </div>
+    </nav>
+
+    <!-- ==========================================
+         HERO LANDING SECTION
+         ========================================== -->
+    <header class="hero">
+        <span class="badge">העולם מחכה לכם</span>
+        <h1>תכנון הטיול הבא שלכם <br><span>מתחיל כאן</span></h1>
+        <p>בונים מסלולים מדויקים, מותאמים אישית וחוסכים לכם זמן וכאב ראש. תארזו מזוודה, על השאר אני אדאג.</p>
+        <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" class="hero-btn">דברו איתי בוואטסאפ</a>
+    </header>
+
+    <!-- ==========================================
+         ABOUT SECTION
+         ========================================== -->
+    <section id="about" class="section bg-white">
+        <div class="about-grid">
+            <div class="about-img">
+                <!-- 
+                  src="images/meitav-profile.jpg" tells the browser to look inside the 'images' folder.
+                  Make sure the file name matches your actual image name exactly (including .jpg vs .png).
+                  alt="מיטב - מתכנן טיולים אישי" is crucial for SEO and screen readers.
+                -->
+                <img src="images/meitav-profile.jpg" alt="מיטב - מתכנן טיולים אישי">
+            </div>
+            <div class="about-text">
+                <h2>מי אני?</h2>
+                <h3>נעים מאוד, אני מיטב. חי ונושם טיולים.</h3>
+                <p>אחרי שנים של שיטוטים בעולם, תכנון מסלולים לחברים ומשפחה, וצבירת חוויות במקומות הכי יפים שיש – החלטתי להפוך את התשוקה למקצוע. אני מאמין שטיול טוב מתחיל בתכנון מדויק, כזה שלוקח בחשבון את הקצב שלכם, ההעדפות שלכם, והחלומות שלכם.</p>
+                <p>במקום שתלכו לאיבוד בים המידע באינטרנט, אני כאן כדי לאסוף את הכל לתיק טיול אחד מסודר. הייתי שם, חוויתי את זה, ועכשיו אני רוצה לעזור לכם לחוות את זה בצורה הטובה ביותר.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SERVICES SECTION
+         ========================================== -->
+    <section id="services" class="section services-bg">
+        <div class="section-title">
+            <h2>השירותים שלי</h2>
+            <p>בחרו את המסלול שמתאים בדיוק לסגנון התכנון שלכם</p>
+        </div>
+        
+        <div class="services-grid">
+            <!-- Service Package 1 -->
+            <div class="service-card">
+                <h3>פגישת ייעוץ והכוונה (זום)</h3>
+                <div class="price">כמה מאות שקלים</div>
+                <p>כבר התחלתם לתכנן אבל צריכים עין מקצועית? פגישה ממוקדת בה נעבור על המסלול שבניתם, נדייק זמנים, נוודא לוגיסטיקה ונוסיף המלצות סודיות שישדרגו לכם את הטיול.</p>
+                <ul class="service-list">
+                    <li>מעבר ובקרת איכות על המסלול</li>
+                    <li>טיפים להתניידות ולוגיסטיקה</li>
+                    <li>מענה על כל השאלות הפתוחות</li>
+                </ul>
+                <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" class="card-btn btn-secondary">לתיאום פגישה</a>
+            </div>
+            
+            <!-- Service Package 2 (Featured) -->
+            <div class="service-card highlight">
+                <div class="popular-badge">המומלץ ביותר</div>
+                <h3>ליווי ותכנון מאפס</h3>
+                <div class="price">סביב 1,000 ש"ח</div>
+                <p>אתם בוחרים את היעד - אני עושה את כל השאר. תכנון שלם של הטיול מא' ועד ת', מותאם אישית אליכם, כולל תיק טיול דיגיטלי מסודר שילווה אתכם לאורך כל הדרך.</p>
+                <ul class="service-list">
+                    <li>פגישת היכרות להבנת הצרכים</li>
+                    <li>תכנון מסלול יומי מפורט</li>
+                    <li>קישורים להזמנת אטרקציות ומסעדות</li>
+                    <li>ליווי בוואטסאפ בזמן הטיול עצמו!</li>
+                </ul>
+                <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" class="card-btn">מתחילים לתכנן</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         DESTINATIONS GALLERY SECTION
+         ========================================== -->
+    <section id="destinations" class="section bg-white">
+        <div class="section-title">
+            <h2>יעדים ומסלולים</h2>
+            <p>הצצה קטנה לטיולים שכבר תכננתי וחוותי בעצמי</p>
+        </div>
+        
+        <div class="dest-grid">
+            <!-- Destination 1: Scotland -->
+            <div class="dest-card">
+                <div class="dest-img">
+                    <!-- Local path relative to index.html -->
+                    <img src="images/scotland.jpg" alt="טיול לסקוטלנד">
+                    <div class="dest-overlay"></div>
+                    <div class="dest-title">סקוטלנד</div>
+                </div>
+                <div class="dest-content">
+                    <p>טבע פראי, טירות עתיקות ומסלול הנהיגה היפה ביותר בהיילנדס.</p>
+                    <!-- Sub-page link to be built in Step 2 -->
+                    <a href="destinations/scotland.html" class="dest-link">צפו במסלול ←</a>
+                </div>
+            </div>
+            
+            <!-- Destination 2: Spain -->
+            <div class="dest-card">
+                <div class="dest-img">
+                    <img src="https://images.unsplash.com/photo-1543783207-ec64e4d95325?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="טיול לספרד">
+                    <div class="dest-overlay"></div>
+                    <div class="dest-title">ספרד</div>
+                </div>
+                <div class="dest-content">
+                    <p>שילוב מושלם של קולינריה במדריד וארכיטקטורה היסטורית בגרנדה.</p>
+                    <!-- Sub-page link to be built in Step 2 -->
+                    <a href="destinations/spain.html" class="dest-link">צפו במסלול ←</a>
+                </div>
+            </div>
+            
+            <!-- Destination 3: Italy -->
+            <div class="dest-card">
+                <div class="dest-img">
+                    <img src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="טיול לאיטליה">
+                    <div class="dest-overlay"></div>
+                    <div class="dest-title">איטליה</div>
+                </div>
+                <div class="dest-content">
+                    <p>יין, פסטה ונופים עוצרי נשימה. המסלול הקלאסי שלא מפסיק לרגש.</p>
+                    <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" class="dest-link">צפו במסלול ←</a>
+                </div>
+            </div>
+            
+            <!-- Destination 4: London -->
+            <div class="dest-card">
+                <div class="dest-img">
+                    <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="טיול ללונדון">
+                    <div class="dest-overlay"></div>
+                    <div class="dest-title">לונדון</div>
+                </div>
+                <div class="dest-content">
+                    <p>טיול אורבני בבירה האירופאית שמשלבת מסורת עם קצב חיים מודרני.</p>
+                    <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" class="dest-link">צפו במסלול ←</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         FOOTER
+         ========================================== -->
+    <footer id="contact">
+        <div class="footer-content">
+            <p>&copy; 2026 כל הזכויות שמורות למיטב - תכנון טיולים אישי.</p>
+            <a href="#admin" class="admin-link">כניסה למערכת (ניהול)</a>
+        </div>
+    </footer>
+
+    <!-- ==========================================
+         FLOATING WHATSAPP CTA
+         ========================================== -->
+    <a href="https://wa.me/" class="whatsapp-float" target="_blank" rel="noopener noreferrer" title="דברו איתי בוואטסאפ">
+        <svg viewBox="0 0 24 24">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+        </svg>
+    </a>
+
+</body>
+</html>

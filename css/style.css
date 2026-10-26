@@ -1,0 +1,540 @@
+/* ==========================================
+   GLOBAL RESETS & CORE STYLES
+   ========================================== */
+
+/* Box Sizing Reset: Forces padding and borders to be included inside an element's total width and height */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Base Body Styles: Sets default typography, background color, text color, and RTL line spacing */
+body {
+    font-family: 'Assistant', sans-serif; /* Primary font family (loaded from Google Fonts in HTML) */
+    background-color: #f8f9fa;            /* Light gray background for comfortable reading */
+    color: #333333;                       /* Soft black font color for optimal visual contrast */
+    line-height: 1.6;                     /* Generous vertical line spacing for Hebrew readability */
+}
+
+/* Utility class for white-background sections (replaces inline styles) */
+.bg-white {
+    background-color: #ffffff;
+}
+
+/* Utility button style for secondary gray buttons */
+.btn-secondary {
+    background: #4b5563 !important;       /* Overrides default brand blue with neutral slate gray */
+}
+
+/* ==========================================
+   NAVIGATION BAR (NAV)
+   ========================================== */
+
+/* Sticky Navigation Header */
+nav {
+    background: #ffffff;                                    /* Solid white background */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);                 /* Subtle bottom drop-shadow for depth */
+    position: sticky;                                      /* Sticks the navbar to the top during scroll */
+    top: 0;                                                /* Locks stickiness to top edge */
+    z-index: 50;                                           /* Keeps navigation above lower page elements */
+}
+
+/* Centered Flexbox Container for Navigation */
+.nav-container {
+    max-width: 1200px;                                     /* Restricts container width on widescreen monitors */
+    margin: 0 auto;                                        /* Centers container horizontally */
+    padding: 15px 20px;                                    /* Vertical (15px) and Horizontal (20px) internal spacing */
+    display: flex;                                         /* Activates Flexbox layout mode */
+    justify-content: space-between;                        /* Places logo on right and links/button on left (RTL) */
+    align-items: center;                                   /* Vertically aligns items along the central axis */
+}
+
+/* Brand Logo Layout */
+.logo {
+    font-weight: 700;                                      /* Bold font weight */
+    font-size: 1.25rem;                                    /* 20px relative font size */
+    color: #1E3A8A;                                        /* Deep Navy Blue primary brand color */
+    display: flex;                                         /* Flex layout to align icon next to text */
+    align-items: center;                                   /* Aligns SVG icon and text vertically */
+    gap: 10px;                                             /* 10px gap between SVG icon and brand text */
+    cursor: pointer;                                       /* Displays pointer hand cursor on hover */
+    text-decoration: none;                                 /* Removes standard link underline */
+}
+
+/* Secondary Sub-headline inside Logo */
+.logo-subtext {
+    font-size: 0.8rem;                                     /* Smaller font size for subtitle */
+    font-weight: 400;                                      /* Regular weight */
+    color: #6b7280;                                        /* Muted gray text color */
+    display: block;                                        /* Forces subtitle to render on a new line */
+}
+
+/* SVG Vector Icon Dimensions inside Logo */
+.logo-icon {
+    width: 30px;
+    height: 30px;
+}
+
+/* Navigation Link List */
+.nav-links {
+    display: flex;                                         /* Displays menu links in a horizontal row */
+    gap: 25px;                                             /* Spacing between list items */
+    list-style: none;                                      /* Removes default bullet points */
+}
+
+/* Individual Navigation Anchor Links */
+.nav-links a {
+    color: #4b5563;                                        /* Muted slate text color */
+    text-decoration: none;                                 /* Removes underline */
+    font-weight: 600;                                      /* Semi-bold text weight */
+    transition: color 0.2s ease-in-out;                    /* Smooth color transition on hover (0.2 seconds) */
+}
+
+/* Navigation Link Hover State */
+.nav-links a:hover {
+    color: #1E3A8A;                                        /* Shifts color to deep navy when hovered */
+}
+
+/* Call-To-Action (CTA) Pill Button in Navigation */
+.nav-btn {
+    background: #1E3A8A;                                   /* Navy background */
+    color: #ffffff;                                        /* White text */
+    padding: 10px 20px;                                    /* Top/Bottom 10px, Left/Right 20px */
+    border-radius: 50px;                                   /* Fully rounded pill-shaped corners */
+    text-decoration: none;                                 /* Removes link underline */
+    font-weight: 600;                                      /* Semi-bold weight */
+    display: inline-flex;                                  /* Enables inline flexbox for icon/text alignment */
+    align-items: center;
+    gap: 8px;
+}
+
+/* ==========================================
+   HERO SECTION
+   ========================================== */
+
+/* Full-width Hero Banner with Dark Gradient Overlay */
+.hero {
+    /* Combined CSS background: semi-transparent blue/slate gradient + high-res Unsplash background image */
+    background: linear-gradient(rgba(30, 58, 138, 0.75), rgba(15, 23, 42, 0.85)), 
+                url('https://images.unsplash.com/photo-1488085061387-422e29b40080?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+    color: #ffffff;                                        /* White text color for contrast over dark image */
+    padding: 80px 20px;                                    /* Vertical padding 80px, horizontal 20px */
+    text-align: center;                                    /* Centers all text content */
+    min-height: 65vh;                                      /* Ensures hero takes at least 65% of screen height */
+    display: flex;                                         /* Flexbox used to vertically center content */
+    flex-direction: column;                                /* Stacks elements top-to-bottom */
+    justify-content: center;                               /* Centers items along vertical axis */
+    align-items: center;                                   /* Centers items along horizontal axis */
+}
+
+/* Small Tag/Badge above Hero Heading */
+.badge {
+    background: #F59E0B;                                   /* Accent Amber/Gold color */
+    color: #ffffff;
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+/* Main Page Heading (H1) */
+.hero h1 {
+    font-size: 2.5rem;                                     /* Scaled headline size */
+    font-weight: 800;                                      /* Extra-bold */
+    margin-bottom: 20px;
+    line-height: 1.2;                                      /* Tighter line spacing for titles */
+}
+
+/* Highlighted Gold Text within Heading */
+.hero h1 span {
+    color: #F59E0B;                                        /* Gold accent color */
+}
+
+/* Hero Paragraph Description */
+.hero p {
+    font-size: 1.15rem;
+    max-width: 700px;                                      /* Restricts line length to increase reading comfort */
+    margin: 0 auto 30px;                                   /* Centers block horizontally, adds 30px bottom margin */
+    font-weight: 300;                                      /* Light font weight */
+    color: #e2e8f0;                                        /* Light gray-blue text */
+}
+
+/* Primary Call-to-Action Button */
+.hero-btn {
+    background: #F59E0B;                                   /* Amber accent background */
+    color: #ffffff;
+    padding: 15px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);              /* Soft shadow to elevate button off page */
+    transition: transform 0.2s ease-in-out;                /* Prepares micro-animation on interaction */
+}
+
+/* Interactive Hover Animation for Hero Button */
+.hero-btn:hover {
+    transform: scale(1.05);                                /* Scales button size up by 5% on hover */
+}
+
+/* ==========================================
+   PAGE SECTIONS & LAYOUT GUIDES
+   ========================================== */
+
+/* Standard Section Container */
+.section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px;
+}
+
+/* Section Heading Header Block */
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: 2.2rem;
+    color: #1E3A8A;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color: #6b7280;
+    font-size: 1.1rem;
+}
+
+/* ==========================================
+   ABOUT SECTION
+   ========================================== */
+
+/* Flexbox Grid for Image + Bio Content */
+.about-grid {
+    display: flex;
+    flex-wrap: wrap;                                       /* Wraps onto multiple lines on small mobile screens */
+    align-items: center;
+    gap: 50px;
+}
+
+.about-img {
+    flex: 1;                                               /* Occupies equal share of flex container width */
+    min-width: 280px;                                      /* Prevents shrinking below 280px before wrapping */
+    text-align: center;
+}
+
+.about-img img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 24px;                                   /* Softly rounded image corners */
+    box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);          /* Elegant drop shadow */
+}
+
+.about-text {
+    flex: 1;
+    min-width: 280px;
+}
+
+.about-text h2 {
+    font-size: 2rem;
+    color: #1E3A8A;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.about-text h3 {
+    font-size: 1.5rem;
+    color: #374151;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.about-text p {
+    color: #4b5563;
+    font-size: 1.05rem;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+/* ==========================================
+   SERVICES SECTION & CARDS
+   ========================================== */
+
+/* Section background wrapper */
+.services-bg {
+    background: #EFF6FF;                                   /* Very light blue tint */
+}
+
+/* CSS Grid for Pricing Cards */
+.services-grid {
+    display: grid;
+    /* Responsive Auto-Fit Grid: Creates columns dynamically (min 300px width each) without media queries */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Standard Pricing Card */
+.service-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 40px 30px;
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05);
+    position: relative;                                    /* Positioning context for absolute elements like badges */
+    display: flex;
+    flex-direction: column;
+    border-top: 4px solid #1E3A8A;                         /* Blue accent border on top edge */
+    transition: transform 0.3s ease;
+}
+
+/* Featured / Popular Service Card Variant */
+.service-card.highlight {
+    border-top-color: #F59E0B;                             /* Gold border top for highlight feature */
+    transform: translateY(-10px);                          /* Slight upward offset to draw attention */
+    box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
+}
+
+/* Popular Badge Pill on Featured Card */
+.popular-badge {
+    position: absolute;
+    top: -15px;                                            /* Positions pill half-way across top border */
+    left: 50%;
+    transform: translateX(-50%);                           /* Centers pill horizontally along the 50% line */
+    background: #F59E0B;
+    color: #ffffff;
+    padding: 4px 15px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    color: #111827;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.price {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #F59E0B;
+    margin-bottom: 20px;
+}
+
+.service-card p {
+    color: #4b5563;
+    margin-bottom: 25px;
+    flex-grow: 1;                                          /* Forces paragraph to expand so buttons align evenly at bottom */
+}
+
+/* Checkmark List inside Cards */
+.service-list {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.service-list li {
+    margin-bottom: 12px;
+    color: #4b5563;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Custom CSS Checkmark Icon insertion */
+.service-list li::before {
+    content: "✓";                                          /* Inserts Unicode checkmark before list items */
+    color: #10B981;                                        /* Emerald green color */
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Card CTA Button */
+.card-btn {
+    display: block;
+    text-align: center;
+    background: #1E3A8A;
+    color: #ffffff;
+    padding: 12px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: background 0.2s ease;
+}
+
+.card-btn:hover {
+    background: #1d4ed8;                                   /* Slightly brighter blue on hover */
+}
+
+.service-card.highlight .card-btn {
+    background: #F59E0B;
+}
+
+.service-card.highlight .card-btn:hover {
+    background: #d97706;
+}
+
+/* ==========================================
+   DESTINATIONS GALLERY
+   ========================================== */
+
+/* Destination Grid Container */
+.dest-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+/* Destination Card */
+.dest-card {
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;                                      /* Clips internal image corners to card radius */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border: 1px solid #f3f4f6;
+    transition: transform 0.3s ease;
+}
+
+.dest-card:hover {
+    transform: translateY(-5px);                           /* Lifts card on hover */
+}
+
+/* Image Wrapper Container */
+.dest-img {
+    height: 180px;
+    position: relative;
+    overflow: hidden;
+}
+
+.dest-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;                                     /* Ensures image fills container without distortion */
+    transition: transform 0.5s ease;                       /* Smooth image zoom effect on parent hover */
+}
+
+.dest-card:hover .dest-img img {
+    transform: scale(1.1);                                 /* Zooms image by 10% on hover */
+}
+
+/* Dark Gradient Overlay on Top of Images for Text Readability */
+.dest-overlay {
+    position: absolute;
+    inset: 0;                                              /* Shorthand for top:0; right:0; bottom:0; left:0 */
+    background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+}
+
+.dest-title {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;                                           /* Right-aligned for RTL layout */
+    color: #ffffff;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.dest-content {
+    padding: 20px;
+}
+
+.dest-content p {
+    color: #6b7280;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.dest-link {
+    color: #1E3A8A;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* ==========================================
+   FOOTER SECTION
+   ========================================== */
+
+footer {
+    background: #111827;                                   /* Dark slate footer background */
+    color: #9ca3af;
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 4px solid #F59E0B;                          /* Accent border top */
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.admin-link {
+    color: #4b5563;
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+
+.admin-link:hover {
+    color: #9ca3af;
+}
+
+/* ==========================================
+   FLOATING WHATSAPP LEAD GENERATION BUTTON
+   ========================================== */
+
+.whatsapp-float {
+    position: fixed;                                       /* Remains pinned to screen corner while scrolling */
+    bottom: 25px;
+    left: 25px;                                            /* Placed on bottom-left for RTL layouts */
+    background: #25D366;                                   /* Official WhatsApp green brand color */
+    color: #ffffff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;                                    /* Circle shape */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    z-index: 100;                                          /* Top-most elevation layer */
+    transition: transform 0.2s ease;
+    text-decoration: none;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);                                 /* Scales icon up on hover */
+}
+
+.whatsapp-float svg {
+    width: 35px;
+    height: 35px;
+    fill: #ffffff;
+}
+
+/* ==========================================
+   RESPONSIVE MEDIA QUERIES (MOBILE BREAKPOINTS)
+   ========================================== */
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;                                   /* Reduces title size on mobile viewports */
+    }
+    .nav-links {
+        display: none;                                     /* Hides desktop navigation links on smaller screens */
+    }
+}
