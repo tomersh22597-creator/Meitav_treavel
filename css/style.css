@@ -384,28 +384,74 @@ nav {
 }
 
 /* ==========================================
-   DESTINATIONS GALLERY
+   CATEGORY TITLES (PROMINENT STRIPE DESIGN)
+   ========================================== */
+.category-title {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #1e3a8a;
+    background: linear-gradient(to left, #f8fafc, #e2e8f0);
+    padding: 12px 20px;
+    border-right: 5px solid #d97706; /* פס זהב בולט בצד ימין */
+    border-radius: 4px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* ==========================================
+   DESTINATIONS GALLERY (HORIZONTAL CAROUSEL)
    ========================================== */
 
-/* Destination Grid Container */
+/* Destination Container - Now a horizontal scrolling list */
 .dest-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    display: flex;
     gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 20px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Custom Scrollbar for modern look */
+.dest-grid::-webkit-scrollbar {
+    height: 8px;
+}
+.dest-grid::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 4px;
+}
+.dest-grid::-webkit-scrollbar-thumb {
+    background: #94a3b8;
+    border-radius: 4px;
+}
+.dest-grid::-webkit-scrollbar-thumb:hover {
+    background: #64748b;
 }
 
 /* Destination Card */
 .dest-card {
+    flex: 0 0 320px; /* רוחב קבוע לכל כרטיסייה */
+    scroll-snap-align: start; /* מיגנוט בגלילה */
     background: #ffffff;
     border-radius: 16px;
-    overflow: hidden;                                      /* Clips internal image corners to card radius */
+    overflow: hidden;
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     border: 1px solid #f3f4f6;
     transition: transform 0.3s ease;
 }
 
 .dest-card:hover {
-    transform: translateY(-5px);                           /* Lifts card on hover */
+    transform: translateY(-5px);
+}
+
+/* Mobile sizing for cards */
+@media (max-width: 768px) {
+    .dest-card {
+        flex: 0 0 280px;
+    }
 }
 
 /* Image Wrapper Container */
@@ -418,25 +464,25 @@ nav {
 .dest-img img {
     width: 100%;
     height: 100%;
-    object-fit: cover;                                     /* Ensures image fills container without distortion */
-    transition: transform 0.5s ease;                       /* Smooth image zoom effect on parent hover */
+    object-fit: cover;
+    transition: transform 0.5s ease;
 }
 
 .dest-card:hover .dest-img img {
-    transform: scale(1.1);                                 /* Zooms image by 10% on hover */
+    transform: scale(1.1);
 }
 
-/* Dark Gradient Overlay on Top of Images for Text Readability */
+/* Dark Gradient Overlay on Top of Images */
 .dest-overlay {
     position: absolute;
-    inset: 0;                                              /* Shorthand for top:0; right:0; bottom:0; left:0 */
+    inset: 0;
     background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
 }
 
 .dest-title {
     position: absolute;
     bottom: 15px;
-    right: 15px;                                           /* Right-aligned for RTL layout */
+    right: 15px;
     color: #ffffff;
     font-size: 1.25rem;
     font-weight: 700;
@@ -537,4 +583,47 @@ footer {
     .nav-links {
         display: none;                                     /* Hides desktop navigation links on smaller screens */
     }
+
+    /* ==========================================
+   LOGO STYLES (PREPARED FOR FUTURE IMAGE LOGO)
+   ========================================== */
+
+/* Utility style for future image logo (replace SVG icon with <img> tag) */
+.logo-img {
+    height: 38px;             /* Standard logo height for sticky navigation header */
+    width: auto;              /* Preserves natural image aspect ratio */
+    object-fit: contain;
+    display: block;
+}
+
+/* ==========================================
+   CATEGORY BLOCKS FOR DESTINATIONS
+   ========================================== */
+.category-block {
+    margin-bottom: 55px;
+}
+
+/* ==========================================
+   CATEGORY TITLES (CENTERED DESIGN)
+   ========================================== */
+.category-title {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #1e3a8a;
+    background: linear-gradient(to top, #f8fafc, #e2e8f0);
+    padding: 10px 30px;
+    border-bottom: 3px solid #d97706; /* פס זהב סימטרי מלמטה במקום בצד */
+    border-radius: 8px;
+    
+    /* פקודות המרכוז */
+    width: fit-content; /* הרקע יתאים בדיוק לאורך המילה */
+    margin: 0 auto 25px auto; /* ממקם את כל הבלוק באמצע המסך */
+    
+    display: flex;
+    align-items: center;
+    justify-content: center; /* ממקם את האייקון והטקסט באמצע */
+    gap: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
 }

@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Primary Page Title displayed in browser tabs and search engine results -->
-    <title>מיטב - תכנון טיולים אישי</title>
+    <title>מיטב הטיולים - תכנון טיולים אישי</title>
 
     <!-- Google Fonts: Preconnects and loads Assistant typography stylesheet -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,7 +25,7 @@
     <!-- Open Graph (WhatsApp & Social Media Link Preview) -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://tomersh22597-creator.github.io/meitav-travel/">
-    <meta property="og:title" content="מיטב - תכנון טיולים אישי">
+    <meta property="og:title" content="מיטב הטיולים - תכנון טיולים אישי">
     <meta property="og:description" content="בונים מסלולים מדויקים, מותאמים אישית וחוסכים לכם זמן וכאב ראש. תארזו מזוודה, על השאר אני אדאג.">
     <meta property="og:image" content="https://tomersh22597-creator.github.io/meitav-travel/images/meitav-profile.jpg">
 
@@ -40,13 +40,9 @@
     <nav>
         <div class="nav-container">
             <!-- Brand Logo Linking to Homepage Top -->
-            <a href="index.html" class="logo">
-                <!-- Inline SVG Vector Icon representing a globe -->
-                <svg class="logo-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                </svg>
-                <span>מיטב <span class="logo-subtext">תכנון טיולים אישי</span></span>
-            </a>
+<a href="index.html" class="logo">
+    <img src="images/logo.svg" alt="מיטב הטיולים" class="logo-img">
+</a>
             
             <!-- Navigation Links pointing to internal section IDs -->
             <ul class="nav-links">
@@ -132,68 +128,120 @@
         </div>
     </section>
 
-    <!-- ==========================================
-         DESTINATIONS GALLERY SECTION
+   <!-- ==========================================
+         DESTINATIONS BY CATEGORY SECTION
          ========================================== -->
     <section id="destinations" class="section bg-white">
         <div class="section-title">
             <h2>יעדים ומסלולים</h2>
-            <p>הצצה קטנה לטיולים שכבר תכננתי וחוותי בעצמי</p>
+            <p>הצצה למסלולים המיוחדים שאני מתכננת בחלוקה לפי סגנונות טיול</p>
         </div>
-        
-        <div class="dest-grid">
-            <!-- Destination 1: Scotland -->
-            <div class="dest-card">
-                <div class="dest-img">
-                    <!-- Local path relative to index.html -->
-                    <img src="images/scotland.jpg" alt="טיול לסקוטלנד">
-                    <div class="dest-overlay"></div>
-                    <div class="dest-title">סקוטלנד</div>
+
+        <!-- קטגוריה 1: נורדיות -->
+        <div class="category-block">
+            <h3 class="category-title">🌲 נורדיות</h3>
+            <div class="dest-grid">
+                <!-- נורווגיה -->
+                <div class="dest-card">
+                    <div class="dest-img">
+                        <img src="images/norway.jpg" alt="טיול לנורווגיה">
+                        <div class="dest-overlay"></div>
+                        <div class="dest-title">נורווגיה</div>
+                    </div>
+                    <div class="dest-content">
+                        <p>פיורדים עוצרי נשימה, קרחונים וכפרים ציוריים בנסיעה נופית.</p>
+                        <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" class="dest-link">צפו במסלול ←</a>
+                    </div>
                 </div>
-                <div class="dest-content">
-                    <p>טבע פראי, טירות עתיקות ומסלול הנהיגה היפה ביותר בהיילנדס.</p>
-                    <!-- Sub-page link to be built in Step 2 -->
-                    <a href="destinations/scotland.html" class="dest-link">צפו במסלול ←</a>
-                </div>
-            </div>
-            
-            <!-- Destination 2: Spain -->
-            <div class="dest-card">
-                <div class="dest-img">
-                    <img src="https://images.unsplash.com/photo-1543783207-ec64e4d95325?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="טיול לספרד">
-                    <div class="dest-overlay"></div>
-                    <div class="dest-title">ספרד</div>
-                </div>
-                <div class="dest-content">
-                    <p>שילוב מושלם של קולינריה במדריד וארכיטקטורה היסטורית בגרנדה.</p>
-                    <!-- Sub-page link to be built in Step 2 -->
-                    <a href="destinations/spain.html" class="dest-link">צפו במסלול ←</a>
-                </div>
-            </div>
-            
-            <!-- Destination 3: Italy -->
-            <div class="dest-card">
-                <div class="dest-img">
-                    <img src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="טיול לאיטליה">
-                    <div class="dest-overlay"></div>
-                    <div class="dest-title">איטליה</div>
-                </div>
-                <div class="dest-content">
-                    <p>יין, פסטה ונופים עוצרי נשימה. המסלול הקלאסי שלא מפסיק לרגש.</p>
-                    <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" class="dest-link">צפו במסלול ←</a>
+
+                <!-- סקוטלנד -->
+                <div class="dest-card">
+                    <div class="dest-img">
+                        <img src="images/scotland.jpg" alt="טיול לסקוטלנד">
+                        <div class="dest-overlay"></div>
+                        <div class="dest-title">סקוטלנד</div>
+                    </div>
+                    <div class="dest-content">
+                        <p>טבע פראי, טירות עתיקות ומסלול הנהיגה היפה ביותר בהיילנדס.</p>
+                        <a href="destinations/scotland.html" class="dest-link">צפו במסלול ←</a>
+                    </div>
                 </div>
             </div>
-            
-            <!-- Destination 4: London -->
-            <div class="dest-card">
-                <div class="dest-img">
-                    <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="טיול ללונדון">
-                    <div class="dest-overlay"></div>
-                    <div class="dest-title">לונדון</div>
+        </div>
+
+        <!-- קטגוריה 2: טרופיות -->
+        <div class="category-block">
+            <h3 class="category-title">🌴 טרופיות</h3>
+            <div class="dest-grid">
+                <!-- דרום הודו -->
+                <div class="dest-card">
+                    <div class="dest-img">
+                        <img src="images/south-india.jpg" alt="טיול לדרום הודו">
+                        <div class="dest-overlay"></div>
+                        <div class="dest-title">דרום הודו</div>
+                    </div>
+                    <div class="dest-content">
+                        <p>תעלות מים ירוקות (Backwaters), מטעי תה ותרבות ססגונית.</p>
+                        <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" class="dest-link">צפו במסלול ←</a>
+                    </div>
                 </div>
-                <div class="dest-content">
-                    <p>טיול אורבני בבירה האירופאית שמשלבת מסורת עם קצב חיים מודרני.</p>
-                    <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" class="dest-link">צפו במסלול ←</a>
+
+                <!-- סרי לנקה -->
+                <div class="dest-card">
+                    <div class="dest-img">
+                        <img src="images/sri-lanka.jpg" alt="טיול לסרי לנקה">
+                        <div class="dest-overlay"></div>
+                        <div class="dest-title">סרי לנקה</div>
+                    </div>
+                    <div class="dest-content">
+                        <p>חופים זהובים, שמורות פילים ורכבות נוף מרהיבות בין ההרים.</p>
+                        <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" class="dest-link">צפו במסלול ←</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- קטגוריה 3: יוון הצד המיוחד -->
+        <div class="category-block">
+            <h3 class="category-title">🏛️ יוון – הצד המיוחד</h3>
+            <div class="dest-grid">
+                <!-- חצי האי פיליון -->
+                <div class="dest-card">
+                    <div class="dest-img">
+                        <img src="images/pelion.jpg" alt="טיול לחצי האי פיליון">
+                        <div class="dest-overlay"></div>
+                        <div class="dest-title">חצי האי פיליון</div>
+                    </div>
+                    <div class="dest-content">
+                        <p>חיבור קסום בין ההר לים, מפרצים נסתרים וכפרים עתיקים.</p>
+                        <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" class="dest-link">צפו במסלול ←</a>
+                    </div>
+                </div>
+
+                <!-- אולימפוס -->
+                <div class="dest-card">
+                    <div class="dest-img">
+                        <img src="images/olympus.jpg" alt="טיול להר אולימפוס">
+                        <div class="dest-overlay"></div>
+                        <div class="dest-title">הר אולימפוס</div>
+                    </div>
+                    <div class="dest-content">
+                        <p>מסלולי הליכה בהר האלים, נחלים זורמים וטבע הררי עוצר נשימה.</p>
+                        <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" class="dest-link">צפו במסלול ←</a>
+                    </div>
+                </div>
+
+                <!-- צפון יוון -->
+                <div class="dest-card">
+                    <div class="dest-img">
+                        <img src="images/north-greece.jpg" alt="טיול לצפון יוון">
+                        <div class="dest-overlay"></div>
+                        <div class="dest-title">צפון יוון (כפרי זגוריה)</div>
+                    </div>
+                    <div class="dest-content">
+                        <p>גשרי אבן עתיקים, קניון ויקוס העמוק וכפרים הרריים ציוריים.</p>
+                        <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" class="dest-link">צפו במסלול ←</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -204,7 +252,7 @@
          ========================================== -->
     <footer id="contact">
         <div class="footer-content">
-            <p>&copy; 2026 כל הזכויות שמורות למיטב - תכנון טיולים אישי.</p>
+            <p>&copy; 2026 כל הזכויות שמורות למיטב הטיולים - תכנון טיולים אישי.</p>
             <a href="#admin" class="admin-link">כניסה למערכת (ניהול)</a>
         </div>
     </footer>
