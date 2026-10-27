@@ -63,7 +63,7 @@ body {
 nav { background: #ffffff; box-shadow: 0 1px 3px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 50; }
 .nav-container { max-width: 1200px; margin: 0 auto; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; }
 .logo { font-weight: 700; font-size: 1.25rem; color: #1E3A8A; display: flex; align-items: center; gap: 10px; cursor: pointer; text-decoration: none; }
-.logo-img { height: 38px; width: auto; object-fit: contain; display: block; }
+.logo-img { height: 60px; width: auto; object-fit: contain; display: block; }
 .logo-subtext { font-size: 0.8rem; font-weight: 400; color: #6b7280; display: block; }
 .logo-icon { width: 30px; height: 30px; }
 .nav-links { display: flex; gap: 25px; list-style: none; }
