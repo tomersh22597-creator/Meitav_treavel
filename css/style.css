@@ -219,3 +219,129 @@ footer { background: #111827; color: #9ca3af; padding: 40px 20px; text-align: ce
     .about-grid { flex-direction: column; text-align: center; }
     .about-text p { text-align: center; }
 }
+/* ==========================================
+   BOUTIQUE TRAVEL COLOR PALETTE & CRO FIXES
+   ========================================== */
+
+/* גלילה רכה לכל האתר */
+html {
+    scroll-behavior: smooth;
+}
+
+/* טיפוגרפיה מהודקת ומודרנית לכותרות בעברית */
+h1, h2, h3 {
+    letter-spacing: -0.02em;
+}
+
+/* 1. הריגת הלבן-בית-חולים לטובת רקע פנינה/שמנת חמים */
+body {
+    background-color: #FAF9F6 !important;
+    color: #2C3E50 !important; /* אפור-כחול עמוק במקום שחור נוקשה לטקסט */
+}
+
+.bg-white { 
+    background-color: #FFFFFF !important; 
+}
+.bg-light, .services-bg { 
+    background-color: #F3F1EA !important; /* גוון חול עדין מאוד למקטעים */
+}
+
+/* 2. שינוי הכחול-תאגידי לכחול-חצות עמוק (לכותרות ולתפריט) */
+h1, h2, h3, h4, .logo, .nav-links a:hover, .item-text h4, .category-title {
+    color: #1A2B4C !important;
+}
+
+/* התאמת צבע המעטפת (Hero) לכחול העמוק החדש עם גרדיאנט מותאם RTL */
+.hero {
+    background: linear-gradient(to left, rgba(26, 43, 76, 0.95) 0%, rgba(26, 43, 76, 0.5) 100%),
+                url('https://images.unsplash.com/photo-1488085061387-422e29b40080?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover !important;
+}
+
+/* 3. הפיכת הכתום-אזהרה לכתום טרה-קוטה/חלודה (לכפתורים ותגיות) */
+.btn-primary, .nav-btn, .card-btn.btn-secondary {
+    background-color: #D96C4A !important;
+    border-color: #D96C4A !important;
+    color: #FFFFFF !important;
+    border-radius: 12px !important; /* ריכוך פינות הכפתורים */
+}
+.btn-primary:hover, .nav-btn:hover, .card-btn.btn-secondary:hover {
+    background-color: #C85A32 !important;
+    border-color: #C85A32 !important;
+}
+
+/* כפתורי מתאר (שקופים עם מסגרת) */
+.btn-outline {
+    border-color: #FAF9F6 !important;
+    border-radius: 12px !important;
+}
+.btn-outline:hover {
+    background: #FAF9F6 !important;
+    color: #1A2B4C !important;
+}
+
+/* תגיות ובאדג'ים בטרה-קוטה */
+.badge, .eyebrow, .popular-badge {
+    background: #D96C4A !important;
+    color: #FFFFFF !important;
+}
+.category-title {
+    border-bottom: 3px solid #D96C4A !important;
+}
+
+/* 4. עידון כרטיסיות (פינות רכות יותר ותחושת ריחוף) */
+.service-card, .dest-card, .included-item, .custom-banner {
+    border-radius: 16px !important; /* פינות רכות ומזמינות */
+    border: none !important; /* הסרת מסגרות נוקשות */
+    box-shadow: 0 10px 30px rgba(26, 43, 76, 0.05) !important;
+}
+
+/* איחוד הגדרות: כרטיסיית מחיר מומלצת - הדגשה אלגנטית */
+.service-card.highlight {
+    border-top: 5px solid #D96C4A !important;
+    background-color: #FFFFFF !important; /* פופ-אפ מהרקע השמנת של הסקשן */
+    transform: translateY(-5px); /* מרים את הכרטיסייה מעט מעל השאר */
+}
+
+/* 5. בועית טקסט צפה לוואטסאפ - אופטימיזציה דסקטופ ומובייל */
+.whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px; /* ממוקם בצד ימין כמקובל באתרים בעברית */
+    left: auto;
+}
+
+.whatsapp-float::before {
+    content: "זמין להתייעצות";
+    position: absolute;
+    right: 70px; /* מרווח מהכפתור */
+    top: 50%;
+    transform: translateY(-50%);
+    background: #ffffff;
+    color: #1e3a8a;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    white-space: nowrap;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+/* הצגה במעבר עכבר (דסקטופ) */
+@media (min-width: 769px) {
+    .whatsapp-float:hover::before {
+        opacity: 1;
+    }
+}
+
+/* הצגה קבועה (מובייל - אין ריחוף) */
+@media (max-width: 768px) {
+    .whatsapp-float::before {
+        opacity: 1; /* גלוי תמיד */
+        right: 65px; /* קצת קרוב יותר במובייל */
+        font-size: 0.75rem; /* טקסט קצת יותר קטן */
+        padding: 5px 10px;
+    }
+}
