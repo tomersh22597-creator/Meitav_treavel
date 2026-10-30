@@ -1,5 +1,5 @@
 /* ==========================================
-   FORM & MODAL EDITORIAL STYLES (MOBILE OPTIMIZED)
+   FORM & MODAL EDITORIAL STYLES (MOBILE FIXED)
    ========================================== */
 
 /* רקע כהה לשקיפות כשעולה פופ-אפ */
@@ -7,13 +7,14 @@
     display: none;
     position: fixed;
     inset: 0;
-    background: rgba(26, 43, 76, 0.7);
+    background: rgba(26, 43, 76, 0.75);
     backdrop-filter: blur(5px);
     z-index: 999;
+    /* שינוי ל-flex-start עם מרווח למעלה כדי שהאיקס לא ייחתך לעולם */
     justify-content: center;
-    align-items: center;
-    padding: 15px; /* מרווח בטוח מהשוליים במסכים קטנים */
-    overflow-y: auto; /* מאפשר גלילה אם המסך קצר מדי במובייל */
+    align-items: flex-start;
+    padding: 40px 15px 30px 15px;
+    overflow-y: auto; /* מאפשר גלילה חלקה במובייל */
 }
 
 .form-overlay.active {
@@ -24,13 +25,13 @@
     width: 100%;
     max-width: 600px;
     background: #ffffff;
-    padding: 35px 25px;
+    /* הגדלנו קצת את הרווח למעלה (padding-top) כדי שהכותרת והאיקס ינשuמו */
+    padding: 45px 25px 30px 25px;
     border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(26, 43, 76, 0.15);
+    box-shadow: 0 20px 40px rgba(26, 43, 76, 0.2);
     position: relative;
     animation: fadeInScale 0.3s ease;
-    max-height: 90vh; /* שלא יחרוג מהמסך לגובה במובייל */
-    overflow-y: auto;  /* גלילה פנימית במידת הצורך */
+    margin-bottom: 40px; /* מרווח נוח בגלילה למטה */
 }
 
 @keyframes fadeInScale {
@@ -38,17 +39,17 @@
     to { opacity: 1; transform: scale(1); }
 }
 
-/* כפתור סגירה מוגדל ונוח ללחיצה במובייל */
+/* כפתור סגירה מוגדל, בולט ונגיש תמיד בפינה השמאלית */
 .form-close-btn {
     position: absolute;
     top: 15px;
-    left: 15px; /* צד שמאל בעברית */
+    left: 15px;
     background: #f1f5f9;
     border: none;
-    width: 36px;
-    height: 36px;
+    width: 42px;
+    height: 42px;
     border-radius: 50%;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: bold;
     cursor: pointer;
     color: #1A2B4C;
@@ -99,7 +100,7 @@
     border: 1px solid #cbd5e1;
     border-radius: 12px;
     font-family: 'Assistant', sans-serif;
-    font-size: 1rem; /* לפחות 16px מונע זום אוטומטי מעצבן באייפון */
+    font-size: 1rem;
     background-color: #FAF9F6;
     color: #2C3E50;
     transition: all 0.3s ease;
@@ -156,8 +157,11 @@ textarea.form-control {
 
 /* התאמות נוספות למובייל קטן במיוחד */
 @media (max-width: 480px) {
+    .form-overlay {
+        padding: 20px 10px;
+    }
     .form-container-box {
-        padding: 25px 15px;
+        padding: 40px 15px 25px 15px;
     }
     .form-header h2 {
         font-size: 1.5rem;
