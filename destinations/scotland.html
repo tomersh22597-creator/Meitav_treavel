@@ -3,109 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>מסלול לסקוטלנד | מיטב הטיולים</title>
+    <title>סקוטלנד - מסע אל ההיילנדס | מיטב הטיולים</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600&family=Frank+Ruhl+Libre:wght@300;400;700&display=swap" rel="stylesheet">
     
-    <!-- ==========================================
-         SEO & WHATSAPP PREVIEW TAGS
-         ========================================== -->
-    <meta name="description" content="תכנון טיולים אישי ומותאם אישית בחו&quot;ל עם מיטב. בניית מסלולים מדויקים לחופשה מושלמת ללא כאבי ראש.">
-    <meta name="keywords" content="תכנון טיולים, מתכנן טיולים אישי, סקוטלנד, ספרד, איטליה, לונדון">
-    <meta name="author" content="מיטב">
-
-    <!-- Open Graph (WhatsApp & Social Media Link Preview) -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://tomersh22597-creator.github.io/meitav-travel/">
-    <meta property="og:title" content="מיטב - תכנון טיולים אישי">
-    <meta property="og:description" content="בונים מסלולים מדויקים, מותאמים אישית וחוסכים לכם זמן וכאב ראש. תארזו מזוודה, על השאר אני אדאג.">
-    <meta property="og:image" content="https://tomersh22597-creator.github.io/meitav-travel/images/meitav-profile.jpg">
-
-    <!-- Link to global CSS from subfolder -->
+    <!-- CSS -->
+    <!-- קודם העיצוב הראשי (לתפריט, לפוטר וכו') -->
     <link rel="stylesheet" href="../css/style.css">
+    <!-- ואז העיצוב המגזיני שדורס ומוסיף את סגנון היעדים -->
+    <link rel="stylesheet" href="../css/magazine.css">
+
+    <link rel="icon" type="image/jpeg" href="../images/favicon.jpg">
+    <!-- Analytics Script -->
+    <script src="../js/analytics.js"></script>
 </head>
-<body>
+<main>
+    <body class="magazine-layout">
 
-    <!-- ==========================================
-         NAVIGATION HEADER
-         ========================================== -->
-    <nav>
-        <div class="nav-container">
-            <!-- Brand Logo Linking to Homepage Top -->
-<a href="../index.html" class="logo">
-    <img src="../images/logo.svg" alt="מיטב הטיולים" class="logo-img">
-</a>
+        <!-- התפריט הראשי של האתר יוזרק לכאן אוטומטית -->
+        <nav></nav>
+
+        <!-- 1. HERO -->
+        <header class="mag-hero" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url('../images/scotland.jpg');">
+            <div class="mag-hero-top">
+                <span>מיטב הטיולים</span>
+                <span>גלו את הפרא</span>
+            </div>
             
-            <ul class="nav-links">
-                <li><a href="../index.html#about">קצת עליי</a></li>
-                <li><a href="../index.html#services">השירותים שלי</a></li>
-                <li><a href="../index.html#destinations">יעדים ומסלולים</a></li>
-            </ul>
-            
-            <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" class="nav-btn">בוואטסאפ</a>
-        </div>
-    </nav>
+            <div class="mag-hero-center">
+                <span class="mag-eyebrow">סקוטלנד, ללא פילטרים</span>
+                <div class="mag-title-box">
+                    <h1>המקום בו העולם<br>מרגיש רחוק להפליא.</h1>
+                </div>
+                <p class="mag-hero-desc">עקבו אחרי הערפל אל תוך נוף של אבנים עתיקות, שמיים פתוחים, מים פראיים והרים שיישארו אתכם לתמיד.</p>
+                <a href="https://wa.me/972000000000?text=%D7%94%D7%99%D7%99%20%D7%9E%D7%99%D7%98%D7%91,%20%D7%90%D7%A0%D7%99%20%D7%A8%D7%95%D7%A6%D7%94%20%D7%9C%D7%AA%D7%9B%D7%A0%D7%9F%20%D7%9E%D7%A1%D7%A2%20%D7%9C%D7%A1%D7%A7%D7%95%D7%98%D7%9C%D7%A0%D7%93" target="_blank" class="mag-btn">דברו איתי על המסלול הזה</a>
+            </div>
+        </header>
 
-    <!-- ==========================================
-         SCOTLAND HERO BANNER (Full Design Match)
-         ========================================== -->
-    <!-- Uses relative path ../images/scotland.jpg for local image -->
-    <header class="hero" style="background: linear-gradient(rgba(30, 58, 138, 0.75), rgba(15, 23, 42, 0.85)), url('../images/scotland.jpg') center/cover;">
-        <span class="badge">יעד נבחר</span>
-        <h1>מסלול מקיף לסקוטלנד <br><span>טבע פראי וטירות עתיקות</span></h1>
-        <p>מפות הנהיגה היפות ביותר בהיילנדס, נופים דרמטיים באי סקאי, וחוויות בלתי נשכחות בהתאמה אישית.</p>
-        <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" class="hero-btn">תכננו לי טיול לסקוטלנד</a>
-    </header>
+        <!-- 2. TEXT SECTION -->
+        <section class="mag-text-section">
+            <div class="eyebrow-dark">מסע מסוג אחר</div>
+            <div class="mag-text-content">
+                <h2>קחו את הדרך הארוכה.<br>תנו לנוף להוביל.</h2>
+                <p>זהו מקום לבוקר שקט לצד האגם, לשבילים שמטפסים אל תוך העננים, וליופי שדורש מכם להוריד הילוך. גלו את ההיילנדס דרך המקומות הפראיים והסיפורים העתיקים שמרכיבים את המסלול הייחודי שבניתי עבורכם.</p>
+            </div>
+        </section>
 
-    <!-- ==========================================
-         SCOTLAND ITINERARY DETAILS
-         ========================================== -->
-    <section class="section bg-white">
-        <div class="about-grid">
-            <div class="about-text" style="flex: 2;">
-                <h2>מה כולל המסלול?</h2>
-                <h3>חוויה של פעם בחיים ברחבי סקוטלנד</h3>
-                <p>סקוטלנד היא יעד מושלם לאוהבי טבע, נופים פתוחים ונהיגה נופית. המסלול הזה נבנה מתוך ניסיון אישי בשטח כדי להבטיח שתחוו את המקומות היפים ביותר בקצב הנכון לכם.</p>
-                
-                <ul class="service-list" style="margin-top: 25px;">
-                    <li><strong>ימים 1-2: אדינבורו</strong> – הרויאל מייל, טירת אדינבורו המפורסמת, תצפית מארתורס סיט וסיורי סמטאות עתיקות.</li>
-                    <li><strong>ימים 3-4: הדרך להיילנדס</strong> – שמורת הטבע קיירנגורמס, טירת בלמורל ואגמים ענקיים.</li>
-                    <li><strong>ימים 5-6: האי סקאי (Isle of Skye)</strong> – מסלולי הליכה ב-Old Man of Storr, עמק הפיות (Fairy Pools) ומצוקי Quiraing.</li>
-                    <li><strong>יום 7: עמק גלנקו ולוך נס</strong> – נהיגה דרך עמק גלנקו הדרמטי, אגם לוך נס וחזרה לטיסה.</li>
-                </ul>
-
-                <br>
-                <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" class="hero-btn">דברו איתי להתאמת המסלול</a>
+        <!-- 3. GALLERY -->
+        <section class="mag-gallery-section">
+            <div class="mag-gallery-header">
+                <div>
+                    <div class="eyebrow-dark" style="margin-bottom: 10px;">ההיילנדס קוראים לכם</div>
+                    <h2>מצאו את הטבע שלכם</h2>
+                </div>
+                <p style="max-width: 300px; font-size: 0.9rem; color: #666; margin: 0;">מרכסי הרים נישאים ועד לקצה הים, כל פנייה במסלול חושפת סיפור חדש.</p>
             </div>
 
-        <div class="about-img" style="flex: 1;">
-    <!-- 
-      ../images/ steps OUT of the 'destinations/' folder and INTO 'images/'.
-      scotland-detail.jpg points to your newly converted gallery image.
-    -->
-    <img src="../images/scotland-detail.jpg" alt="נופי ההיילנדס בסקוטלנד">
-</div>
-        </div>
-    </section>
+            <div class="mag-grid">
+                <div class="mag-card">
+                    <img src="../images/scotland-1.jpg" alt="אל תוך ההרים">
+                    <div class="mag-card-content">
+                        <div class="mag-card-eyebrow">01 / הרי קויראנג</div>
+                        <h3>אל תוך ההרים</h3>
+                        <p>צעדו מתחת לפסגות עתיקות באי סקאי ומצאו פרספקטיבה חדשה על העולם תוך נהיגה בכבישים הדרמטיים ביותר.</p>
+                    </div>
+                </div>
+                
+                <div class="mag-card">
+                    <img src="../images/scotland-2.jpg" alt="בעקבות המים">
+                    <div class="mag-card-content">
+                        <div class="mag-card-eyebrow">02 / מים פראיים</div>
+                        <h3>בעקבות המים</h3>
+                        <p>חפשו את המפלים הרועמים, הנחלים הנסתרים ואגמי ה"לוך" השקטים שמסתתרים בחיק העמקים.</p>
+                    </div>
+                </div>
 
-    <!-- ==========================================
-         FOOTER
-         ========================================== -->
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2026 כל הזכויות שמורות למיטב הטיולים - תכנון טיולים אישי.</p>
-        </div>
-    </footer>
+                <div class="mag-card">
+                    <img src="../images/scotland-3.jpg" alt="מעבר לאופק">
+                    <div class="mag-card-content">
+                        <div class="mag-card-eyebrow">03 / הקצה הרחוק</div>
+                        <h3>מעבר לאופק</h3>
+                        <p>הרגישו את אוויר הים הקריר וגלו את הדרמה השקטה של החופים והטירות העתיקות בקצה המרוחק של סקוטלנד.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/" class="whatsapp-float" target="_blank" rel="noopener noreferrer" title="דברו איתי בוואטסאפ">
-        <svg viewBox="0 0 24 24">
-            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-        </svg>
-    </a>
+        <!-- 4. BOTTOM / CALL TO ACTION -->
+        <section class="mag-bottom">
+            <div class="mag-eyebrow" style="color: rgba(255,255,255,0.6);">הישארו עוד קצת</div>
+            <h2>יש מקומות שמשנים את הדרך בה אתם רואים הכל.</h2>
+            <p style="margin-bottom: 40px; color: rgba(255,255,255,0.8);">ההיילנדס הם לא מקום למהר בו. בואו בשביל הנוף, הישארו בשביל ההרגשה.<br>תנו לי לבנות לכם את המסלול המדויק עבורכם.</p>
+            <a href="https://wa.me/972000000000?text=%D7%94%D7%99%D7%99%20%D7%9E%D7%99%D7%98%D7%91,%20%D7%A7%D7%A8%D7%90%D7%AA%D7%99%20%D7%90%D7%AA%20%D7%94%D7%9E%D7%A1%D7%9C%D7%95%D7%9C%20%D7%9C%D7%A1%D7%A7%D7%95%D7%98%D7%9C%D7%A0%D7%93%20%D7%95%D7%90%D7%A0%D7%99%20%D7%A8%D7%95%D7%A6%D7%94%20%D7%9C%D7%94%D7%AA%D7%97%D7%99%D7%9C%20%D7%9C%D7%AA%D7%9B%D7%A0%D7%9F" class="mag-btn" target="_blank">מתחילים לתכנן</a>
+        </section>
 
-</body>
+        <!-- SCRIPTS -->
+        <script src="../js/navbar.js"></script>
+        <script src="../js/analytics.js"></script>
+        <script src="../js/config.js"></script>
+    </body>
+    </main>
 </html>

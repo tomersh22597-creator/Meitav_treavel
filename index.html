@@ -23,6 +23,7 @@
 
     <!-- External Global Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/form.css">
 
     <!-- Analytics Script -->
     <script src="js/analytics.js"></script>
@@ -53,7 +54,7 @@
             
             <div class="hero-buttons">
                 <!-- כפתור באנר ראשי -->
-                <a href="https://wa.me/972000000000?text=%D7%94%D7%99%D7%99%20%D7%9E%D7%99%D7%98%D7%91,%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%9E%D7%94%D7%A2%D7%9E%D7%95%D7%93%20%D7%94%D7%A8%D7%90%D7%A9%D7%99%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%A9%D7%A0%D7%AA%D7%97%D7%99%D7%9C%20%D7%9C%D7%AA%D7%9B%D7%A0%D7%9F%20%D7%90%D7%AA%20%D7%94%D7%98%D7%99%D7%95%D7%9C%20%D7%94%D7%91%D7%90%20%D7%A9%D7%9C%D7%99" target="_blank" rel="noopener noreferrer" class="btn-primary">בואו נתכנן את הטיול שלכם</a>
+                <a href="javascript:void(0);" onclick="openLeadModal('כללי / התאמה אישית')" class="btn-primary">בואו נתכנן את הטיול שלכם</a>
                 <a href="#destinations" class="btn-outline">צפו במסלולים</a>
             </div>
             
@@ -183,7 +184,7 @@
                     </div>
                     <div class="dest-content">
                         <p>טבע פראי, טירות עתיקות ומסלול הנהיגה היפה ביותר בהיילנדס.</p>
-                        <a href="https://wa.me/972000000000?text=%D7%94%D7%99%D7%99%20%D7%9E%D7%99%D7%98%D7%91,%20%D7%94%D7%AA%D7%A2%D7%A0%D7%99%D7%99%D7%A0%D7%AA%D7%99%20%D7%91%D7%9E%D7%A1%D7%9C%D7%95%D7%9C%20%D7%9C%D7%A1%D7%A7%D7%95%D7%98%D7%9C%D7%A0%D7%93" target="_blank" rel="noopener noreferrer" class="dest-link">לתכנן את המסע הזה ←</a>
+                        <a href="destinations/scotland.html" class="dest-link">לצפייה במסלול המלא ←</a>
                     </div>
                 </div>
             </div>
@@ -371,9 +372,86 @@
         </svg>
     </a>
 
+    <!-- פופ-אפ טופס השארת פרטים -->
+    <div id="leadModalOverlay" class="form-overlay">
+        <div class="form-container-box">
+            <button type="button" class="form-close-btn" onclick="closeLeadModal()">&times;</button>
+            
+            <div id="formContentArea">
+                <div class="form-header">
+                    <span class="eyebrow" style="color: #D96C4A; font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase;">תכנון אישי ללא פשרות</span>
+                    <h2>בואו נתחיל לבנות את הטיול שלכם</h2>
+                    <p>השאירו פרטים ומיטב יחזור אליכם בהקדם עם הצעה מדויקת.</p>
+                </div>
+
+                <form id="siteLeadForm">
+                    <div class="form-group">
+                        <label for="modalName">שם מלא *</label>
+                        <input type="text" id="modalName" name="fullName" class="form-control" required placeholder="למשל: תומר שטרנגלז">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="modalPhone">מספר טלפון / וואטסאפ *</label>
+                        <input type="tel" id="modalPhone" name="phone" class="form-control" required placeholder="למשל: 050-0000000">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="modalEmail">כתובת אימייל</label>
+                        <input type="email" id="modalEmail" name="email" class="form-control" placeholder="למשל: myname@gmail.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="modalDestination">יעד מועדף לטיול *</label>
+                        <input type="text" id="modalDestination" name="destination" class="form-control" required placeholder="למשל: סקוטלנד, יוון, או כל יעד אחר...">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="modalNotes">הערות, הרכב נוסעים או בקשות מיוחדות</label>
+                        <textarea id="modalNotes" name="notes" class="form-control" placeholder="טיול זוגי, משפחתי, כמה ימים וכו'..."></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-lead-btn">שליחת פרטים למיטב</button>
+                </form>
+            </div>
+
+            <div id="formSuccessArea" class="form-success-message">
+                <h3>הפרטים התקבלו בהצלחה!</h3>
+                <p>תודה רבה. מיטב קיבל את הפנייה ויחזור אליך בהקדם האפשרי.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openLeadModal(defaultDestination = '') {
+            const overlay = document.getElementById('leadModalOverlay');
+            const destInput = document.getElementById('modalDestination');
+            if (defaultDestination) {
+                destInput.value = defaultDestination;
+            }
+            overlay.classList.add('active');
+        }
+
+        function closeLeadModal() {
+            document.getElementById('leadModalOverlay').classList.remove('active');
+        }
+
+        document.getElementById('siteLeadForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            document.getElementById('formContentArea').style.display = 'none';
+            document.getElementById('formSuccessArea').style.display = 'block';
+
+            setTimeout(() => {
+                closeLeadModal();
+                document.getElementById('siteLeadForm').reset();
+                document.getElementById('formContentArea').style.display = 'block';
+                document.getElementById('formSuccessArea').style.display = 'none';
+            }, 3000);
+        });
+    </script>
+
     <!-- Script Configuration -->
     <script src="js/navbar.js"></script>
     <script src="js/config.js"></script>
-
 </body>
 </html>

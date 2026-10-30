@@ -1,0 +1,222 @@
+/* ==========================================
+   MAGAZINE / EDITORIAL DESTINATION STYLES
+   ========================================== */
+
+:root {
+    --mag-bg: #EBE7E0; /* רקע שמנת חמים */
+    --mag-text: #2A2A2A;
+    --mag-accent: #192723; /* ירוק/שחור עמוק */
+    --mag-serif: 'Frank Ruhl Libre', serif; /* פונט הכותרות המהודר */
+    --mag-sans: 'Assistant', sans-serif;
+}
+
+body.magazine-layout {
+    background-color: var(--mag-bg);
+    color: var(--mag-text);
+    font-family: var(--mag-sans);
+}
+
+/* 1. HERO SECTION */
+.mag-hero {
+    position: relative;
+    height: 90vh;
+    background-position: center;
+    background-size: cover;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 5%;
+}
+
+.mag-hero-top {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    z-index: 2;
+}
+
+.mag-hero-center {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 800px;
+    z-index: 2;
+}
+
+.mag-eyebrow {
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    color: rgba(255,255,255,0.8);
+}
+
+.mag-title-box {
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 40px;
+    margin-bottom: 30px;
+}
+
+.mag-title-box h1 {
+    font-family: var(--mag-serif);
+    font-size: 4.5rem;
+    font-weight: 400;
+    line-height: 1.1;
+    margin: 0;
+    text-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    color: #ffffff !important;
+}
+
+.mag-hero-desc {
+    font-size: 1.1rem;
+    max-width: 500px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    font-weight: 300;
+}
+
+.mag-btn {
+    background: #D5B48D;
+    color: #111;
+    border: none;
+    padding: 15px 40px;
+    font-family: var(--mag-sans);
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.mag-btn:hover {
+    background: #c3a17a;
+    transform: translateY(-3px);
+}
+
+/* 2. TEXT SECTION */
+.mag-text-section {
+    padding: 120px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 50px;
+}
+
+.mag-text-section .eyebrow-dark {
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    color: #555;
+    margin-top: 15px;
+}
+
+.mag-text-content h2 {
+    font-family: var(--mag-serif);
+    font-size: 3.5rem;
+    font-weight: 400;
+    line-height: 1.2;
+    color: var(--mag-accent) !important;
+    margin-bottom: 30px;
+}
+
+.mag-text-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #444;
+    max-width: 650px;
+}
+
+/* 3. GALLERY SECTION */
+.mag-gallery-section {
+    padding: 60px 5% 120px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.mag-gallery-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 60px;
+}
+
+.mag-gallery-header h2 {
+    font-family: var(--mag-serif);
+    font-size: 3rem;
+    font-weight: 400;
+    margin: 10px 0 0 0;
+    color: var(--mag-accent) !important;
+}
+
+.mag-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.mag-card {
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+
+.mag-card img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+}
+
+.mag-card-content {
+    padding: 30px 20px;
+}
+
+.mag-card-eyebrow {
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    color: #888;
+    margin-bottom: 15px;
+}
+
+.mag-card h3 {
+    font-family: var(--mag-serif);
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 15px;
+    color: var(--mag-accent) !important;
+}
+
+.mag-card p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* 4. BOTTOM SECTION */
+.mag-bottom {
+    background: var(--mag-accent);
+    color: #fff;
+    padding: 120px 5%;
+    text-align: center;
+}
+
+.mag-bottom h2 {
+    font-family: var(--mag-serif);
+    font-size: 4rem;
+    font-weight: 400;
+    max-width: 800px;
+    margin: 20px auto 40px;
+    line-height: 1.2;
+    color: #ffffff !important;
+}
+
+/* Responsive */
+@media(max-width: 900px) {
+    .mag-text-section { grid-template-columns: 1fr; }
+    .mag-grid { grid-template-columns: 1fr; }
+    .mag-title-box h1 { font-size: 3rem; }
+    .mag-title-box { padding: 20px; }
+    .mag-card img { height: 350px; }
+}

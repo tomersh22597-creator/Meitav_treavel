@@ -1,0 +1,81 @@
+<div id="leadModalOverlay" class="form-overlay">
+    <div class="form-container-box">
+        <button type="button" class="form-close-btn" onclick="closeLeadModal()">&times;</button>
+        
+        <div id="formContentArea">
+            <div class="form-header">
+                <span class="eyebrow" style="color: #D96C4A; font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase;">תכנון אישי ללא פשרות</span>
+                <h2>בואו נתחיל לבנות את הטיול שלכם</h2>
+                <p>השאירו פרטים ומיטב יחזור אליכם בהקדם עם הצעה מדויקת.</p>
+            </div>
+
+            <form id="siteLeadForm">
+                <div class="form-group">
+                    <label for="modalName">שם מלא *</label>
+                    <input type="text" id="modalName" name="fullName" class="form-control" required placeholder="למשל: תומר שטרנגלז">
+                </div>
+
+                <div class="form-group">
+                    <label for="modalPhone">מספר טלפון / וואטסאפ *</label>
+                    <input type="tel" id="modalPhone" name="phone" class="form-control" required placeholder="למשל: 050-0000000">
+                </div>
+
+                <div class="form-group">
+                    <label for="modalEmail">כתובת אימייל</label>
+                    <input type="email" id="modalEmail" name="email" class="form-control" placeholder="למשל: myname@gmail.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="modalDestination">יעד מועדף לטיול *</label>
+                    <!-- שדה טקסט חופשי שמתמלא אוטומטית אם לחצו על יעד ספציפי -->
+                    <input type="text" id="modalDestination" name="destination" class="form-control" required placeholder="למשל: סקוטלנד, יוון, או כל יעד אחר...">
+                </div>
+
+                <div class="form-group">
+                    <label for="modalNotes">הערות, הרכב נוסעים או בקשות מיוחדות</label>
+                    <textarea id="modalNotes" name="notes" class="form-control" placeholder="טיול זוגי, משפחתי, כמה ימים וכו'..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-lead-btn">שליחת פרטים למיטב</button>
+            </form>
+        </div>
+
+        <!-- הודעת הצלחה (תופיע אחרי לחיצה) -->
+        <div id="formSuccessArea" class="form-success-message">
+            <h3>הפרטים התקבלו בהצלחה!</h3>
+            <p>תודה רבה. מיטב קיבל את הפנייה ויחזור אליך בהקדם האפשרי.</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    // פונקציות פתיחה וסגירה של הפופ-אפ וניהול השליחה המקומית
+    function openLeadModal(defaultDestination = '') {
+        const overlay = document.getElementById('leadModalOverlay');
+        const destInput = document.getElementById('modalDestination');
+        if (defaultDestination) {
+            destInput.value = defaultDestination;
+        }
+        overlay.classList.add('active');
+    }
+
+    function closeLeadModal() {
+        document.getElementById('leadModalOverlay').classList.remove('active');
+    }
+
+    document.getElementById('siteLeadForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // מצב הדגמה מקומי - מציג הודעת הצלחה בלי לשלוח לשום מקום עדיין
+        document.getElementById('formContentArea').style.display = 'none';
+        document.getElementById('formSuccessArea').style.display = 'block';
+
+        setTimeout(() => {
+            closeLeadModal();
+            // איפוס הטופס להפעלה הבאה
+            document.getElementById('siteLeadForm').reset();
+            document.getElementById('formContentArea').style.display = 'block';
+            document.getElementById('formSuccessArea').style.display = 'none';
+        }, 3000);
+    });
+</script>
