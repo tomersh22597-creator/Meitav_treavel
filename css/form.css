@@ -1,18 +1,19 @@
 /* ==========================================
-   FORM & MODAL EDITORIAL STYLES
+   FORM & MODAL EDITORIAL STYLES (MOBILE OPTIMIZED)
    ========================================== */
 
-/* רקע כהה לשקיפות כשעולה פופ-אפ (אם נרצה בהמשך) */
+/* רקע כהה לשקיפות כשעולה פופ-אפ */
 .form-overlay {
     display: none;
     position: fixed;
     inset: 0;
-    background: rgba(26, 43, 76, 0.6);
+    background: rgba(26, 43, 76, 0.7);
     backdrop-filter: blur(5px);
     z-index: 999;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 15px; /* מרווח בטוח מהשוליים במסכים קטנים */
+    overflow-y: auto; /* מאפשר גלילה אם המסך קצר מדי במובייל */
 }
 
 .form-overlay.active {
@@ -21,13 +22,15 @@
 
 .form-container-box {
     width: 100%;
-    max-width: 650px;
+    max-width: 600px;
     background: #ffffff;
-    padding: 45px 35px;
+    padding: 35px 25px;
     border-radius: 20px;
     box-shadow: 0 20px 40px rgba(26, 43, 76, 0.15);
     position: relative;
     animation: fadeInScale 0.3s ease;
+    max-height: 90vh; /* שלא יחרוג מהמסך לגובה במובייל */
+    overflow-y: auto;  /* גלילה פנימית במידת הצורך */
 }
 
 @keyframes fadeInScale {
@@ -35,41 +38,51 @@
     to { opacity: 1; transform: scale(1); }
 }
 
+/* כפתור סגירה מוגדל ונוח ללחיצה במובייל */
 .form-close-btn {
     position: absolute;
-    top: 20px;
-    left: 20px; /* צד שמאל כי אנחנו בעברית */
-    background: none;
+    top: 15px;
+    left: 15px; /* צד שמאל בעברית */
+    background: #f1f5f9;
     border: none;
-    font-size: 1.5rem;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    font-weight: bold;
     cursor: pointer;
-    color: #64748b;
-    transition: color 0.2s;
+    color: #1A2B4C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+    z-index: 10;
 }
 
 .form-close-btn:hover {
-    color: #1A2B4C;
+    background: #e2e8f0;
 }
 
 .form-header {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
+    margin-top: 10px;
 }
 
 .form-header h2 {
     font-family: 'Frank Ruhl Libre', serif;
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     color: #1A2B4C;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .form-header p {
     color: #64748b;
-    font-size: 1rem;
+    font-size: 0.95rem;
 }
 
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 }
 
 .form-group label {
@@ -86,7 +99,7 @@
     border: 1px solid #cbd5e1;
     border-radius: 12px;
     font-family: 'Assistant', sans-serif;
-    font-size: 1rem;
+    font-size: 1rem; /* לפחות 16px מונע זום אוטומטי מעצבן באייפון */
     background-color: #FAF9F6;
     color: #2C3E50;
     transition: all 0.3s ease;
@@ -101,7 +114,7 @@
 
 textarea.form-control {
     resize: vertical;
-    min-height: 100px;
+    min-height: 90px;
 }
 
 .submit-lead-btn {
@@ -116,14 +129,13 @@ textarea.form-control {
     cursor: pointer;
     transition: background 0.3s ease, transform 0.2s ease;
     box-shadow: 0 4px 12px rgba(217, 108, 74, 0.25);
+    margin-top: 10px;
 }
 
 .submit-lead-btn:hover {
     background: #C85A32;
-    transform: translateY(-2px);
 }
 
-/* הודעת הצלחה נסתרת שמופיעה לאחר שליחה */
 .form-success-message {
     display: none;
     text-align: center;
@@ -132,12 +144,22 @@ textarea.form-control {
 
 .form-success-message h3 {
     font-family: 'Frank Ruhl Libre', serif;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     color: #10B981;
     margin-bottom: 10px;
 }
 
 .form-success-message p {
     color: #64748b;
-    font-size: 1rem;
+    font-size: 0.95rem;
+}
+
+/* התאמות נוספות למובייל קטן במיוחד */
+@media (max-width: 480px) {
+    .form-container-box {
+        padding: 25px 15px;
+    }
+    .form-header h2 {
+        font-size: 1.5rem;
+    }
 }
