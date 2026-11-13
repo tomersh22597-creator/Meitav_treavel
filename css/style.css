@@ -161,6 +161,13 @@ section .eyebrow { background: transparent; color: #D96C4A; padding: 0; display:
     box-shadow: 0 15px 35px rgba(26, 43, 76, 0.1);
 }
 
+/* התאמת כרטיסיית יעד לחיצה מלאה (כמו סקוטלנד) */
+a.dest-card {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
 /* ==========================================
    SERVICES SECTION
    ========================================== */

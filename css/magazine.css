@@ -28,14 +28,18 @@ body.magazine-layout {
     padding: 40px 5%;
 }
 
+
 .mag-hero-top {
     display: flex;
     justify-content: space-between;
     font-size: 0.85rem;
+    font-weight: 600;
     letter-spacing: 2px;
     text-transform: uppercase;
     z-index: 2;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.75);
 }
+
 
 .mag-hero-center {
     flex-grow: 1;
@@ -49,14 +53,14 @@ body.magazine-layout {
 
 .mag-eyebrow {
     font-size: 0.8rem;
+    font-weight: 600;
     letter-spacing: 3px;
     margin-bottom: 20px;
-    color: rgba(255,255,255,0.8);
+    color: rgba(255, 255, 255, 0.95);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.75);
 }
 
 .mag-title-box {
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    padding: 40px;
     margin-bottom: 30px;
 }
 
